@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="一场从点粒子到量子弦、额外维度与统一理论的交互式视觉探索。" />
+  <meta name="theme-color" content="#050812" />
+  <title>弦·万物之弦｜弦理论交互式图解</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>STRING<span>/</span>THEORY</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#idea">核心思想</a>
+      <a href="#modes">振动模态</a>
+      <a href="#dimensions">额外维度</a>
+      <a href="#frontier">理论边界</a>
+    </nav>
+    <a class="nav-cta" href="#journey">开始探索 <span>↘</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="journey">
+      <canvas id="universeCanvas" aria-label="一条发光量子弦在多维空间中振动的动画"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> INTERACTIVE THEORY 01</div>
+        <h1>万物并非<br />由点构成，<br /><em>而是振动。</em></h1>
+        <p>弦理论提出：电子、光子乃至引力子，可能都是同一种微小“一维弦”的不同振动方式。</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#idea">进入弦的尺度 <span>↓</span></a>
+          <button class="sound-button" id="motionToggle" type="button" aria-pressed="false">
+            <span class="motion-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span id="motionLabel">暂停宇宙</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-data" aria-hidden="true">
+        <div><span>尺度</span><strong>≈ 10<sup>−35</sup> m</strong></div>
+        <div><span>临界维度</span><strong>9 + 1</strong></div>
+        <div><span>基本对象</span><strong>1D STRING</strong></div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>SCROLL TO DESCEND</div>
+    </section>
+
+    <section class="section idea-section" id="idea">
+      <div class="section-index">01 / THE SHIFT</div>
+      <div class="section-heading">
+        <div>
+          <p class="kicker">核心思想</p>
+          <h2>把自然界的“字母”<br />从点，换成一根弦。</h2>
+        </div>
+        <p class="lead">在标准模型中，基本粒子通常被视为没有内部结构的点。弦理论把最基本的对象替换为极短的一维弦：它可以开放，也可以闭合。</p>
+      </div>
+
+      <div class="comparison" data-reveal>
+        <article class="concept-card particle-card">
+          <div class="card-meta"><span>01A</span><span>POINT PARTICLE</span></div>
+          <div class="particle-viz" aria-hidden="true">
+            <span class="orbit o1"></span><span class="orbit o2"></span><span class="orbit o3"></span>
+            <span class="particle-dot"></span>
+          </div>
+          <div class="card-copy">
+            <h3>点粒子</h3>
+            <p>零维，没有长度与内部结构。不同粒子被当作彼此独立的基本实体。</p>
+            <div class="equation">x<sup>μ</sup>(τ)</div>
+          </div>
+        </article>
+        <div class="transform-mark" aria-hidden="true"><span>维度跃迁</span><b>→</b></div>
+        <article class="concept-card string-card">
+          <div class="card-meta"><span>01B</span><span>ONE-DIMENSIONAL STRING</span></div>
+          <div class="string-viz" aria-hidden="true"><svg viewBox="0 0 520 230" preserveAspectRatio="none"><defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path class="string-shadow" d="M24,116 C78,30 128,202 184,115 S292,28 344,115 S446,202 496,112"/><path class="string-line" d="M24,116 C78,30 128,202 184,115 S292,28 344,115 S446,202 496,112" filter="url(#glow)"/></svg></div>
+          <div class="card-copy">
+            <h3>量子弦</h3>
+            <p>一维，有长度与张力。同一根弦的不同量子振动，对应不同的粒子属性。</p>
+            <div class="equation">X<sup>μ</sup>(σ, τ)</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="principle-strip" data-reveal>
+        <p>关键不是“弦由什么组成”，而是——</p>
+        <blockquote>弦被假定为基本对象；<strong>粒子是弦的量子态。</strong></blockquote>
+        <span>01 / 05</span>
+      </div>
+    </section>
+
+    <section class="section modes-section" id="modes">
+      <div class="section-index">02 / QUANTUM MODES</div>
+      <div class="section-heading modes-heading">
+        <div>
+          <p class="kicker">粒子的交响乐</p>
+          <h2>一种弦，<br />奏出整个粒子谱。</h2>
+        </div>
+        <p class="lead">像琴弦的基频与泛音，每种允许的量子振动都携带特定的质量、自旋和电荷。点击下方模态，观察同一根弦如何“成为”不同粒子。</p>
+      </div>
+
+      <div class="mode-lab" data-reveal>
+        <div class="lab-readout">
+          <span class="lab-label">CURRENT QUANTUM STATE</span>
+          <div class="particle-name"><span id="modeIndex">01</span><h3 id="modeName">光子态</h3></div>
+          <p id="modeDesc">开放弦的一种无质量自旋 1 振动，可呈现规范场的量子。</p>
+          <dl>
+            <div><dt>弦型</dt><dd id="modeType">开放弦</dd></div>
+            <div><dt>自旋</dt><dd id="modeSpin">1</dd></div>
+            <div><dt>作用</dt><dd id="modeForce">电磁相互作用</dd></div>
+          </dl>
+        </div>
+        <div class="lab-stage">
+          <div class="stage-coordinates" aria-hidden="true"><span>+Y</span><span>−Y</span><span>−X</span><span>+X</span></div>
+          <canvas id="stringCanvas" aria-label="可交互的量子弦振动模态"></canvas>
+          <div class="frequency-readout"><span>频率模式</span><strong id="frequencyValue">ν₁</strong></div>
+        </div>
+        <div class="mode-selector" role="group" aria-label="选择弦的振动模态">
+          <button class="mode-button active" type="button" data-mode="photon" aria-pressed="true"><span>01</span><b>光子</b><small>OPEN / SPIN 1</small></button>
+          <button class="mode-button" type="button" data-mode="graviton" aria-pressed="false"><span>02</span><b>引力子</b><small>CLOSED / SPIN 2</small></button>
+          <button class="mode-button" type="button" data-mode="matter" aria-pressed="false"><span>03</span><b>物质态</b><small>OPEN / SPIN ½</small></button>
+        </div>
+      </div>
+      <p class="science-note" data-reveal><span>严谨说明</span> “一根弦奏出所有粒子”是直观类比。精确地说，粒子对应弦量子化后的允许态；其谱还取决于弦的边界条件、紧致化几何、D-膜配置与超对称性。</p>
+    </section>
+
+    <section class="section scale-section" id="scale">
+      <div class="section-index">03 / SCALE</div>
+      <div class="scale-layout">
+        <div class="scale-copy">
+          <p class="kicker">不可思议的微小</p>
+          <h2>如果原子有一座<br />太阳系那么大——</h2>
+          <p class="lead">一根弦仍可能只有一棵树那么长。典型弦长常被设想接近普朗克长度，但弦尺度是理论参数，并未被实验确定。</p>
+          <div class="scale-control">
+            <label for="scaleSlider">观察尺度 <output id="scaleOutput">10⁰ m</output></label>
+            <input id="scaleSlider" type="range" min="0" max="35" value="0" step="1" />
+            <div class="scale-labels"><span>人类尺度</span><span>原子</span><span>质子</span><span>普朗克尺度</span></div>
+          </div>
+        </div>
+        <div class="scale-visual" aria-live="polite">
+          <div class="scale-ring r1"></div><div class="scale-ring r2"></div><div class="scale-ring r3"></div>
+          <div class="scale-object" id="scaleObject"><span></span></div>
+          <div class="scale-caption"><span id="scaleCategory">宏观世界</span><strong id="scaleName">1 米</strong><p id="scaleDescription">你熟悉的日常尺度</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dimensions-section" id="dimensions">
+      <div class="section-index">04 / HIDDEN DIMENSIONS</div>
+      <div class="section-heading">
+        <div>
+          <p class="kicker">卷曲的空间</p>
+          <h2>我们看见 4 维，<br />理论需要 10 维。</h2>
+        </div>
+        <p class="lead">超弦理论数学一致性的临界时空维数是 10：一个时间维与九个空间维。未被看见的六个空间维，可能紧致化在极微小的几何中。</p>
+      </div>
+
+      <div class="dimension-explorer" data-reveal>
+        <div class="dimension-copy">
+          <div class="dimension-number"><span id="dimensionCount">04</span><small>DIMENSIONS<br />VISIBLE</small></div>
+          <h3 id="dimensionTitle">熟悉的时空</h3>
+          <p id="dimensionText">三个延展的空间维，加上一个时间维，构成我们日常经验中的四维时空。</p>
+          <button id="dimensionToggle" class="outline-button" type="button" aria-pressed="false">展开隐藏维度 <span>+</span></button>
+        </div>
+        <div class="dimension-viz" id="dimensionViz" aria-label="从四维时空展开到六个紧致额外维度的示意图">
+          <div class="spacetime-grid" aria-hidden="true"></div>
+          <div class="dimension-core" aria-hidden="true">
+            <div class="calabi-ring c1"></div><div class="calabi-ring c2"></div><div class="calabi-ring c3"></div>
+            <span class="core-light"></span>
+          </div>
+          <div class="dimension-label visible-label">3 空间 + 1 时间</div>
+          <div class="dimension-label hidden-label">+ 6 紧致空间维</div>
+        </div>
+      </div>
+      <div class="dimension-facts" data-reveal>
+        <article><span>几何决定物理</span><p>紧致空间的形状与拓扑会影响低能世界中的粒子谱、对称性和耦合。</p></article>
+        <article><span>类比：远看水管</span><p>远看只有前后一个维度；靠近后，才发现还有沿圆周运动的卷曲维度。</p></article>
+        <article><span>不是任意添加</span><p>临界维度来自量子理论保持共形对称、消除反常的一致性要求。</p></article>
+      </div>
+    </section>
+
+    <section class="section unity-section">
+      <div class="section-index">05 / UNIFICATION</div>
+      <div class="unity-grid">
+        <div class="unity-copy">
+          <p class="kicker">为何如此迷人</p>
+          <h2>让量子力学<br />与引力说同一种语言。</h2>
+          <p>点粒子的量子引力计算会出现难以控制的紫外发散。弦具有有限长度，相互作用被“摊开”，使高能行为更柔和。</p>
+          <p>更关键的是：闭弦谱中自然出现无质量自旋 2 态，其低能相互作用与广义相对论中的引力子一致。引力不是被强行塞入，而是理论自己要求它存在。</p>
+        </div>
+        <div class="unity-diagram" aria-label="弦理论连接量子场论与广义相对论的示意图" data-reveal>
+          <div class="unity-orbit orbit-a"></div><div class="unity-orbit orbit-b"></div>
+          <div class="unity-node quantum"><span>QFT</span><small>量子场论</small></div>
+          <div class="unity-node gravity"><span>GR</span><small>广义相对论</small></div>
+          <div class="unity-center"><div class="mini-string"></div><strong>STRING<br />THEORY</strong><small>量子引力候选框架</small></div>
+          <span class="diagram-caption cap-a">微观 · 概率 · 量子</span><span class="diagram-caption cap-b">时空 · 几何 · 引力</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section map-section" id="frontier">
+      <div class="section-index">06 / THE LANDSCAPE</div>
+      <div class="section-heading">
+        <div><p class="kicker">从五种理论到一张地图</p><h2>看似不同的弦，<br />或许是同一理论的侧面。</h2></div>
+        <p class="lead">20 世纪 90 年代的对偶性发现表明，五种一致的十维超弦理论可通过强弱耦合与几何变换相互联系，并指向一个 11 维的更深层框架：M 理论。</p>
+      </div>
+      <div class="theory-map" data-reveal>
+        <div class="map-center"><span>M</span><strong>M 理论</strong><small>11D / 更高维膜</small></div>
+        <div class="theory-node n1"><strong>TYPE I</strong><small>开放 + 闭合弦</small></div>
+        <div class="theory-node n2"><strong>TYPE IIA</strong><small>非手征闭弦</small></div>
+        <div class="theory-node n3"><strong>TYPE IIB</strong><small>手征闭弦</small></div>
+        <div class="theory-node n4"><strong>SO(32)</strong><small>杂化弦</small></div>
+        <div class="theory-node n5"><strong>E₈ × E₈</strong><small>杂化弦</small></div>
+        <svg class="map-lines" viewBox="0 0 1000 560" aria-hidden="true"><path d="M500 280L190 120M500 280L500 62M500 280L810 120M500 280L745 460M500 280L255 460"/><circle cx="500" cy="280" r="176"/><circle cx="500" cy="280" r="230"/></svg>
+      </div>
+    </section>
+
+    <section class="section frontier-section">
+      <div class="frontier-title"><p class="kicker">科学的边界</p><h2>它不是“万物理论”的完成式，<br />而是一项仍在进行的研究计划。</h2></div>
+      <div class="frontier-grid">
+        <article data-reveal><span>01</span><h3>它解释了什么？</h3><p>提供包含量子引力、规范相互作用与物质态的统一数学框架，并催生了黑洞微观熵、全息对偶等深刻成果。</p></article>
+        <article data-reveal><span>02</span><h3>还缺少什么？</h3><p>理论存在大量可能的紧致化与真空解，尚未唯一导出我们的标准模型及宇宙学参数。</p></article>
+        <article data-reveal><span>03</span><h3>能否实验检验？</h3><p>直接探测典型弦尺度远超现有加速器能力。低能超对称、额外维度或宇宙弦等信号至今也未获决定性证据。</p></article>
+      </div>
+      <div class="verdict" data-reveal><span>当前共识</span><p>弦理论是最成熟的量子引力候选框架之一，数学影响深远；但它<strong>仍不是经过实验确认的自然定律。</strong></p></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-mark"><span>STRING</span><span>THEORY</span></div>
+    <div class="footer-content">
+      <p>从一根不可见的弦，<br />重新想象整个宇宙。</p>
+      <div class="references"><span>延伸阅读</span><p>Green, Schwarz & Witten · <i>Superstring Theory</i><br />Polchinski · <i>String Theory</i><br />Becker, Becker & Schwarz · <i>String Theory and M-Theory</i></p></div>
+    </div>
+    <div class="footer-bottom"><span>AN INTERACTIVE EXPLORATION</span><a href="#top">回到顶部 ↑</a><span>© 2026</span></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
